@@ -1,0 +1,110 @@
+$deep-navy: #05151b;
+$teal-blue: #003e4d;
+$cyan-accent: #00c5dd;
+$button-base: #0a89b8;
+$hover-accent: #00e0ff;
+$text-primary: #e8faff;
+$shadow-glow: rgba(0, 255, 255, 0.2);
+
+.Service {
+  min-height: calc(100vh - 100px);
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, $deep-navy, $teal-blue);
+  color: $text-primary;
+  font-family: "Poppins", sans-serif;
+  padding-top: 10rem;
+
+  .special-header {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: $cyan-accent;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .text {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 800px;
+      margin: 0 auto;
+      color: $text-primary;
+
+      span {
+        color: $cyan-accent;
+      }
+    }
+  }
+
+  .Srvice-contianr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    .service-card {
+      background: $teal-blue;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px $shadow-glow;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 255, 255, 0.3);
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      h2 {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        color: $cyan-accent;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        color: lighten($text-primary, 10%);
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // Optional: Add spacing tweaks for small devices
+  @media (max-width: 480px) {
+    padding: 3rem 1rem;
+
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+
+      img {
+        width: 80px;
+        height: 80px;
+        padding: 1rem;
+      }
+    }
+  }
+}

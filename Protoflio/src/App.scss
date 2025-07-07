@@ -1,0 +1,26 @@
+html {
+  // scroll-snap-type: y mandatory;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+section:last-child {
+  min-height: 100vh;
+  scroll-snap-align: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Sansation", sans-serif;
+}
+body {
+  background-color: #0b0b0d;
+  color: lightgrey;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

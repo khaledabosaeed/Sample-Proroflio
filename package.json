@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass-embedded": "^1.89.2"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "motion": "^12.19.1"
+  }
+}

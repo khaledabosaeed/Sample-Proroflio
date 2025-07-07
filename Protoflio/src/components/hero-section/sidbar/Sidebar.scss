@@ -1,0 +1,81 @@
+.Sidebar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  color: black;
+
+  .Sidebar__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; // center the links vertically
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .Links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        font-size: 1.5rem;
+        color: #111;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1) translateY(-2px);
+        }
+      }
+    }
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10001;
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+  // Responsive hide sidebar on small screens
+  @media (max-width: 768px) {
+    width: 220px;
+
+    .Sidebar__content {
+      .Links a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 180px;
+
+    button {
+      width: 40px;
+      height: 40px;
+      top: 15px;
+      left: 15px;
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+}
